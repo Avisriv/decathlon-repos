@@ -2,16 +2,8 @@
 
 Decathlon Repositories
 
+IDE Used : Visual Studio Code
 This project was created with
-
-    _                      _                 ____ _     ___ 
-    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
-   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | | 
-  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | | 
- /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
-                |___/
-    
-
 Angular CLI: 12.0.1
 Node: 14.15.1
 Package Manager: npm 7.14.0
