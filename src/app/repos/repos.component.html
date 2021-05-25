@@ -1,0 +1,99 @@
+<div class="content">
+    <form [formGroup]="searchUserForm">
+        <div class="btn-layout" fxLayout="row" fxFlexAlign="center" fxLayoutGap="4%">
+            <h2 fxFlex="45%">Github Public Repositories</h2>
+            <mat-form-field fxFlex="20%">
+                <mat-label class="matplaceclr">Search Repository (by Title)</mat-label>
+                <label>
+                    <input type="search" matInput
+                        (keyup)="applyFilterTitle($event)" />
+                </label>
+                <mat-icon matPrefix class="searchIconClass">search</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Select language(s)</mat-label>
+                <mat-select style="color: #dac39c" placeholder="Select
+                    languages" formControlName="languageSelector" multiple>
+                    <mat-option #allSelectedLang (click)="toggleAllLang()" [value]="0">All</mat-option>
+                    <mat-option #oneSelectedLang class="langOption" *ngFor="let
+                        filters of languageFilters" [value]="filters.key" (click)="toggleSingleLang()">
+                        {{ filters.value }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Select type(s)</mat-label>
+                <mat-select style="color: #dac39c" placeholder="Select
+                    types" formControlName="typeSelector" multiple>
+                    <mat-option #allSelectedType (click)="toggleAllType()" [value]="0">All</mat-option>
+                    <mat-option #oneSelectedType class="langOption" *ngFor="let
+                        filters of typeFilters" [value]="filters.key" (click)="toggleSingleType()">
+                        {{ filters.value }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="20%">
+                <mat-label class="matplaceclr">Search Repository (by Topic)</mat-label>
+                <label>
+                    <input type="search" matInput
+                        (keyup)="applyFilterTopic($event)" />
+                </label>
+                <mat-icon matPrefix class="searchIconClass">search</mat-icon>
+            </mat-form-field>
+        </div>
+    </form>
+
+    <div class="mat-table-class">
+        <table class="tableClass" matSort (matSortChange)="sortData($event)" matSortActive="title" matSortDirection="asc" mat-table #table [dataSource]="dataSource">
+            <!-- Name Column -->
+            <ng-container matColumnDef="title">
+                <th mat-sort-header="title" mat-header-cell *matHeaderCellDef>Title</th>
+                <td class="titleColumnClass" mat-cell *matCellDef="let element">
+                    <span title="{{ element.description }}">{{ element.name }}
+                        <br />
+                        <p class="smallRepType">(Type: {{ element.rep_type }})</p></span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="language">
+                <th mat-sort-header="language" mat-header-cell *matHeaderCellDef>
+                    Language
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <span>{{ element.language }}</span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="stargazers">
+                <th mat-sort-header="stargazers" mat-header-cell *matHeaderCellDef>
+                    Stargazers
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <span>{{ element.stargazers_count }}</span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="lastUpdated">
+                <th mat-sort-header="lastUpdated" mat-header-cell *matHeaderCellDef>
+                    Last updated
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <span>{{ element.updated_at | date: "medium" }}</span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="topics">
+                <th mat-header-cell *matHeaderCellDef>Topics</th>
+                <td class="titleColumnClass" mat-cell *matCellDef="let element">
+                    <span>{{ element.topics }} </span>
+                </td>
+            </ng-container>
+
+            <tr class="tableHeaderClass" mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+    </div>
+    <mat-paginator class="mat-paginator-sticky" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>

@@ -1,0 +1,163 @@
+.content {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.form {
+    margin-top: 1px;
+}
+
+h2 {
+    color: #dac39c;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.tableClass {
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+.mat-table-class {
+    width: 100%;
+    background-size: 100% 100%;
+    margin-top: -12px;
+    /* margin-left: 4%; */
+    overflow-y: scroll;
+    position: sticky;
+    overflow-x: hidden;
+    min-height: 538px;
+    max-height: 538px;
+}
+
+.mat-header-cell {
+    font-family: Raleway-Medium, sans-serif;
+    color: #dac39c;
+    position: sticky;
+}
+
+.mat-cell {
+    color: white;
+}
+
+td.mat-cell {
+    border-color: #717171;
+    font-size: 20px;
+}
+
+.tableHeaderClass {
+    background: #373737;
+}
+
+.mat-paginator {
+    bottom: 0;
+    width: 100%;
+    background-color: #212121;
+    color: white;
+}
+
+th.mat-header-cell {
+    border-color: #717171;
+    font-size: large;
+}
+
+.mat-select-value {
+    color: white;
+}
+
+.mat-select-arrow {
+    color: white;
+}
+
+.matColumnDef {
+    color: #c1c1c1;
+}
+
+mat-label {
+    color: #dac39c;
+}
+
+.optionClass {
+    background-color: #171717;
+    color: #dac39c;
+}
+
+.mat-paginator-sticky {
+    background-color: #373737;
+    z-index: 10;
+}
+
+.mat-form-field {
+    margin-top: 18px;
+}
+
+.btn-layout {
+    /* margin-top: 4%; */
+    width: 100%;
+    /* padding-left: 5%; */
+    align-self: center;
+}
+
+input.mat-input-element {
+    color: white;
+}
+
+.matplaceclr {
+    color: #dac39c !important;
+}
+
+.searchIconClass {
+    color: #dac39c;
+}
+
+.smallRepType {
+    margin-top: 0px;
+    font-size: smaller;
+}
+
+.titleColumnClass {
+    padding-top: 10px;
+}
+
+::ng-deep .mat-select-value {
+    color: #dac39c;
+}
+
+::ng-deep .mat-select-arrow {
+    color: #dac39c;
+}
+
+::ng-deep .mat-select-placeholder {
+    color: #dac39c;
+    font-size: medium;
+}
+
+::ng-deep .mat-select-trigger {
+    color: #dac39c;
+}
+
+.langOption {
+    background-color: #373737;
+    color: #dac39c;
+}
+
+.mat-column-title {
+    width: 17%;
+}
+
+.mat-column-language {
+    width: 10%;
+}
+
+.mat-column-stargazers {
+    width: 8%;
+}
+
+.mat-column-lastUpdated {
+    width: 15%;
+}
+
+.mat-column-topics {
+    width: 30%;
+}

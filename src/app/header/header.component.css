@@ -1,0 +1,47 @@
+.logo-image {
+    height: 100%;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+
+.welcome-message {
+    color: white;
+    width: auto;
+    font-size: 14px;
+}
+
+.username {
+    color: white;
+    font-family: Raleway-Medium, sans-serif;
+    width: auto;
+    margin-left: 5px;
+    font-size: medium;
+    float: right;
+}
+
+.separator {
+    color: #4e4e4e;
+    margin-left: 10px;
+    height: auto;
+    font-size: 22px;
+}
+
+.logout {
+    color: white;
+    margin-left: 15px;
+    height: auto;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.fill-space {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color: #373737;
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    top: 0;
+}
