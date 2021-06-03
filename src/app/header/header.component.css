@@ -5,13 +5,13 @@
 }
 
 .welcome-message {
-    color: white;
+    color: black;
     width: auto;
     font-size: 14px;
 }
 
 .username {
-    color: white;
+    color: black;
     font-family: Raleway-Medium, sans-serif;
     width: auto;
     margin-left: 5px;
@@ -40,8 +40,8 @@
 }
 
 .mat-toolbar {
-    background-color: #373737;
+    background-color: white;
     font-family: Raleway, sans-serif;
     font-size: 16px;
-    top: 0;
+    top: 10;
 }

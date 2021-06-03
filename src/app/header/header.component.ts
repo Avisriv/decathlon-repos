@@ -1,6 +1,4 @@
-import { HostListener } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +6,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  username = 'Marc';
+  username = 'TradeFi';
   ngOnInit(): void {}
 }

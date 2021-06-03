@@ -142,6 +142,11 @@ input.mat-input-element {
     color: #dac39c;
 }
 
+.typeOption {
+  background-color: #373737;
+  color: #dac39c;
+}
+
 .mat-column-title {
     width: 17%;
 }

@@ -27,7 +27,7 @@
                 <mat-select style="color: #dac39c" placeholder="Select
                     types" formControlName="typeSelector" multiple>
                     <mat-option #allSelectedType (click)="toggleAllType()" [value]="0">All</mat-option>
-                    <mat-option #oneSelectedType class="langOption" *ngFor="let
+                    <mat-option #oneSelectedType class="typeOption" *ngFor="let
                         filters of typeFilters" [value]="filters.key" (click)="toggleSingleType()">
                         {{ filters.value }}
                     </mat-option>
